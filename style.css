@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap');
+
+:root {
+  --primary-color: #778A50;
+  --bg-color: #EDF2C5;
+  --card-bg: #F7FBDA;
+  --content-text: #7D7D7D;
+  --text-dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 頁首 header */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.header-top h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-box {
+  background-color: var(--primary-color);
+  color: white;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.btn-sm {
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* 導覽列 */
+nav {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 10px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 主視覺 Hero Section */
+.hero {
+  position: relative;
+  height: 360px;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 78%);
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-overlay h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.hero-overlay p {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* 半透明灰色 Shop Now 按鈕 */
+.btn-shop {
+  background-color: rgba(125, 125, 125, 0.65);
+  color: white;
+  padding: 10px 28px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 下方主容器 */
+.main-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.col-left, .col-right {
+  flex: 1;
+}
+
+.block-title {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+/* 左欄：3 個卡片區 (總高 136px + 106px = 242px) */
+.cards-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  flex: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 136px; /* 圖片高度調整為 136px */
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  background-color: var(--card-bg);
+  height: 106px; /* Figma 精確數值 106px */
+  padding: 10px 6px;
+  text-align: center;
+  border-radius: 0 0 2px 2px;
+}
+
+.card-body h3 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.card-body p {
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--content-text);
+}
+
+/* 右欄：Contact 區塊 (精確鎖定 Figma 高度 242px) */
+.contact-box {
+  background-color: var(--card-bg);
+  padding: 14px 16px;
+  margin-top: 10px;
+  height: 242px; /* Figma Group 11 精確高度 242px */
+  border-radius: 0 0 4px 4px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--content-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-box .intro {
+  margin-bottom: 8px;
+}
+
+.info-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.info-col {
+  flex: 1;
+}
+
+.contact-footer {
+  border-top: 1px solid #C0C0C0;
+  padding-top: 8px;
+}
+
+.support-text {
+  margin-bottom: 8px;
+}
+
+.contact-item {
+  margin-bottom: 2px;
+}
+
+/* 頁尾 */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
